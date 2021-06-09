@@ -1,0 +1,2 @@
+python-tornado:
+  pkg.installed

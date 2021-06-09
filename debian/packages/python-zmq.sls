@@ -1,0 +1,2 @@
+python-zmq:
+  pkg.installed

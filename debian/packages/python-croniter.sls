@@ -1,0 +1,2 @@
+python-croniter:
+  pkg.installed
