@@ -1,0 +1,2 @@
+libpam-pwquality:
+  pkg.installed
