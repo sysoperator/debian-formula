@@ -1,11 +1,15 @@
 {%- macro Python3_M2Crypto() -%}
   {%- if grains['os_family'] == 'Debian' %}
-      - {% if grains['os'] == 'Ubuntu' and grains['osrelease_info'] < (18, 4) %}pip{% else %}pkg{% endif %}: python3-m2crypto
+      - {% if grains['os'] == 'Ubuntu' and grains['osrelease_info']|list < [18, 4] %}pip{% else %}pkg{% endif %}: python3-m2crypto
+  {%- elif grains['os_family'] == 'RedHat' %}
+      - pkg: python36-m2crypto
   {%- endif %}
 {%- endmacro -%}
 
 {%- macro Python3_Jinja2() -%}
   {%- if grains['os_family'] == 'Debian' %}
-      - {% if grains['os'] == 'Ubuntu' and grains['osrelease_info'] < (18, 4) %}pip{% else %}pkg{% endif %}: python3-jinja2
+      - {% if grains['os'] == 'Ubuntu' and grains['osrelease_info']|list < [18, 4] %}pip{% else %}pkg{% endif %}: python3-jinja2
+  {%- elif grains['os_family'] == 'RedHat' %}
+      - pkg: python36-jinja
   {%- endif %}
 {%- endmacro -%}
