@@ -1,0 +1,2 @@
+dirmngr:
+  pkg.installed
