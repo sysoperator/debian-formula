@@ -8,5 +8,5 @@ python3-m2crypto:
   {% endif %}
 {% elif grains['os_family'] == 'RedHat' %}
   pkg.installed:
-    - name: python36-m2crypto
+    - name: python{% if grains['osmajorrelease'] < 8 %}36{% endif %}-m2crypto
 {% endif %}

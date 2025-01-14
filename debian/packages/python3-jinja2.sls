@@ -5,7 +5,7 @@ python3-jinja2:
     - name: Jinja2 == 2.10.1
   {%- else %}
   pkg.installed{% if grains['os_family'] == 'RedHat' %}:
-    - name: python36-jinja
+    - name: python{% if grains['osmajorrelease'] < 8 %}36{% endif %}-jinja
     {%- endif %}
   {%- endif %}
 {%- endif %}
