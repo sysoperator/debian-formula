@@ -1,2 +1,0 @@
-python-openssl:
-  pkg.installed

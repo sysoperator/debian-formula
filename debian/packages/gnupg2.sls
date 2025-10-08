@@ -1,2 +1,3 @@
 gnupg2:
-  pkg.installed
+  pkg.installed:
+    - name: gpg

@@ -1,2 +1,0 @@
-python-systemd:
-  pkg.installed

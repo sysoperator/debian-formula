@@ -1,2 +1,2 @@
-python3-pygit2:
+sysfsutils:
   pkg.installed
